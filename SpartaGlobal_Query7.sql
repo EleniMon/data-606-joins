@@ -1,4 +1,0 @@
-USE SpartaGlobalDB;
-
-ALTER TABLE Courses
-ALTER COLUMN Course_Name VARCHAR(50) NOT NULL;
