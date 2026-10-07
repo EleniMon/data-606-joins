@@ -1,0 +1,16 @@
+--CREATE DATABASE SpartaGlobalDB;
+
+USE SpartaGlobalDB;
+
+CREATE TABLE Courses(
+	Course_ID INT PRIMARY KEY IDENTITY(1,1),
+	Course_Name VARCHAR(40) NOT NULL,
+	Trainer VARCHAR(80) NOT NULL,
+	Starting_Date DATE NOT NULL);
+
+CREATE TABLE Spartans(
+	Spartan_ID INT PRIMARY KEY IDENTITY(1,1),
+	First_Name VARCHAR(40) NOT NULL,
+	Middle_Name VARCHAR(40),
+	Last_Name VARCHAR(40) NOT NULL,
+	Course_ID INT FOREIGN KEY REFERENCES Courses(Course_ID));
